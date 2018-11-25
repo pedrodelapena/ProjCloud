@@ -7,5 +7,5 @@ echo "installing flask"
 sudo pip3 install flask
 echo "Exporting variables"
 export APP_URL="0.0.0.0"
-echo "starting flask app"
-python3 restapi.py
+#echo "Starting Server"
+#python3 restapi.py --isso da ruim por algum motivo
