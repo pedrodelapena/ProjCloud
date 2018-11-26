@@ -20,7 +20,7 @@ def get_insert():
     
     if request.method == "POST":
         content = json.loads(request.data)
-        task[task_id] = Task(task_id, content["name"])
+        task[task_id] = Tarefa(task_id, content["name"])
         task_id += 1
         return json.dumps({'status': 200}), 200
     else:   
@@ -55,4 +55,4 @@ def cng(id):
             return json.dumps({'status': 404}), 404
 
 if __name__ == "__main__":
-    app.run(debug = True, port = 5000)
+    app.run(debug = True, port = 5000, host = '0.0.0.0')
