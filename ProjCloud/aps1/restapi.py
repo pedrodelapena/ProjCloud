@@ -49,7 +49,7 @@ def cng(id):
     
     else:
         try:
-            data = tasks[id]
+            data = task[id]
             return json.dumps(data, default = lambda d: d.__dict__)
         
         except:
