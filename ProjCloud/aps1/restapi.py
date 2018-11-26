@@ -25,7 +25,7 @@ def get_insert():
         task_id += 1
         return json.dumps({'status': 200}), 200
     else:   
-        return json.dumps(tasks, default = lambda d: d.__dict__)
+        return json.dumps(task, default = lambda d: d.__dict__)
 
 @app.route('/task/<int:id>', methods = ['DELETE', 'GET', 'PUT'])
 def cng(id):
