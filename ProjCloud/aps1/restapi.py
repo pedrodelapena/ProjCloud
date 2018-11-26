@@ -3,7 +3,7 @@ import json
 
 app = Flask(__name__)
 global task_dict, task_id 
-task_dict = {}
+task = {} #dict
 task_id = 0
 
 class Tarefa():
@@ -17,6 +17,7 @@ def page():
 
 @app.route('/task', methods = ["POST", "GET"])
 def get_insert():
+    global task_id
     
     if request.method == "POST":
         content = json.loads(request.data)
