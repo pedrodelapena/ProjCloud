@@ -15,6 +15,10 @@ class Tarefa():
 def page():
     return "Claimed by Ninninn"
 
+@app.route('/healthcheck', methods = ['GET']) 
+def healthcheck():
+    return 'still alive', 200
+
 @app.route('/task', methods = ["POST", "GET"])
 def get_insert():
     global task_id
