@@ -13,7 +13,7 @@ class Tarefa():
 
 @app.route('/')
 def page():
-    return "Claimed by Ninninn"
+    return "PVM É VIADÃO"
 
 @app.route('/healthcheck', methods = ['GET']) 
 def healthcheck():
