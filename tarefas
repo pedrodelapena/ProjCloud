@@ -1,0 +1,82 @@
+#!/usr/bin/env python3
+import requests
+import json
+import sys
+import os
+
+global endpoint
+endpoint = 'http://<ip>:5000/' #change this to loadbalancer IP
+#os.environ['tarefasApi']
+
+def AddTask(content): #adicionar
+    content_dict = {'name': content}
+    r = requests.post(endpoint + 'task', data=json.dumps(content_dict))
+    print("Content added!")
+
+def ListTasks(): #listar
+    r = requests.get(endpoint + 'task')
+    print(r.text)
+
+def SearchTask(id): #buscar
+    r = requests.get(endpoint + 'task/' + str(id))
+    print(r.text)
+
+def DelTask(id): #deletar
+    r = requests.delete(endpoint + 'task/' + str(id))
+    print("Task " + str(id) + " deleted!")
+
+def UpdateTask(id, content): #atualizar
+    r = requests.put(endpoint + 'task/' + str(id), data=json.dumps({'name': content}))
+    print("Content updated!")
+
+def main():
+    inputSys = sys.argv
+    methodList = ["help", "adicionar", "listar", "buscar", "deletar", "atualizar"]
+
+    if (len(inputSys) > 1) and (inputSys[1] in methodList):
+        if inputSys[1] == methodList[0]: #help
+            print("""
+Command list: \n
+help - Shows this duh \n
+adicionar - Adds a task to the list - input format -> adicionar <content> \n
+listar - Lists all stored tasks - input format -> listar \n
+buscar - Selects task based on id - input format -> buscar <id> \n
+deletar - Deletes task based on id - input format -> deletar <id> \n
+atualizar - Updates task content based on id - input format -> atualizar <id> <content>
+            """)
+
+        elif inputSys[1] == methodList[1]: #add
+            try:
+                AddTask(inputSys[2])
+            except:
+                print("Invalid arguments, type 'tarefas help' for a command usage list")
+        
+        elif inputSys[1] == methodList[2]: #list
+            try:
+                ListTasks()
+            except:
+                print("Invalid arguments, type 'tarefas help' for a command usage list")
+
+        elif inputSys[1] == methodList[3]: #search
+            try:
+                SearchTask(inputSys[2])
+            except:
+                print("Invalid arguments, type 'tarefas help' for a command usage list")
+        
+        elif inputSys[1] == methodList[4]: #delete
+            try:
+                DelTask(inputSys[2])
+            except:
+                print("Invalid arguments, type 'tarefas help' for a command usage list")
+            
+        elif inputSys[1] == methodList[5]: #update
+            try:
+                UpdateTask(inputSys[2], inputSys[3])
+            except:
+                print("Invalid arguments, type 'tarefas help' for a command usage list")
+
+    else:
+        print("Invalid arguments, type 'tarefas help' for a command list")
+
+if __name__ == "__main__":
+    main()
