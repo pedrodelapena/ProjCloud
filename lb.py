@@ -118,7 +118,7 @@ def create_instances():
                 sudo pip install pyrebase
                 git clone https://github.com/pedrodelapena/projcloud
                 cd / 
-                cd /projcloud/
+                cd projcloud/
                 python3 firebase_api.py
             """)
 
@@ -157,7 +157,7 @@ app = Flask(__name__)
 
 def catch_all(path): #loadbalancer
     ip = random.choice(list(instDict.values())) #picks random available ip]
-    return redirect("http://" + ip + ":5000/") #redirects you to a random available ip
+    return redirect("http://" + ip + ":5000/task/") #redirects you to a random available ip
 
 #-------------------------- END FUNCTIONS ----------------------------------
 
