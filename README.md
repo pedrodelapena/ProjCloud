@@ -21,8 +21,6 @@ Por fim, a aplicação consiste em rodar localmente o arquivo <i>firebase_tasks.
 ### Bugs conhecidos
 A aplicação do Firebase deveria permitir que o usuário conseguisse realizar um "tarefa adicionar 'arg1' 'arg2'", porém isso não está funcionando como o devido (migué do "get only" but using a Firebase database instead).
 
-Uma das threads não funciona, portanto enquanto uma instancia é deletada/iniciada, o código "trava".
-
 O loadbalancer precisa ficar aberto no terminal para funcionar.
 
 
