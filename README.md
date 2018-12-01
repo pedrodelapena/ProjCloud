@@ -3,8 +3,8 @@
 ### Por Pedro de la Peña
 
 ### Requisitos
-Utilizar uma máquina UNIX para realização do SSH (dá para fazer com putty em Windows mas não garanto que funciona)</br>
-Configurar a AWS Key e Secret Key utilizando o comando <i>aws configure</i>. Caso não tenha o aplicativo, instale-o com <i>sudo snap install aws-cli --classic</i>
+1.Utilizar uma máquina UNIX para realização do SSH (dá para fazer com putty em Windows mas não garanto que funciona)</br>
+2.Configurar a AWS Key e Secret Key utilizando o comando <i>aws configure</i>. Caso não tenha o aplicativo, instale-o com <i>sudo snap install aws-cli --classic</i>
 
 ### Como utilizar
 Baixar o repositório e com as credenciais da Amazon já configuradas, rodar o script <i>instance_launcher.py</i>. Dentro do código, há variáveis <i>"ownerName", "keyPair", "secGroupName" e "loadBalancerTag"</i> que podem ser alteradas, caso o usuário deseje. Também é preciso ter um arquivo <i>id_rsa.pub</i> no diretório. </br>
