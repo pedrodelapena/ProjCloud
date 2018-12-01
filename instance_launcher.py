@@ -132,7 +132,7 @@ def create_instance(numinst):
     sudo pip3 install pyrebase
     sudo pip install pyrebase
     sudo pip3 install flask_restful
-    sudo snap install aws-cli --classi
+    sudo snap install aws-cli --classic
     git clone https://github.com/pedrodelapena/projcloud
     """)
 
