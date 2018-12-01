@@ -16,10 +16,10 @@ Após o código terminar de rodar, o usuário deve esperar as instâncias termin
 
 Na máquina, o usuário deve configurar novamente as suas credenciais da Amazon, utilizando o mesmo comando anteriormente descrito. Com isto feito, o usuário deve ir até o diretório /projcloud e rodar o arquivo lb.py para ativar o monitoramento e gerenciamento de isntâncias. A partir deste ponto, caso uma instância pare de funcionar (timeout de 7 segundos), o código automaticamente deleta a instância e a substitui com uma nova. 
 
-Por fim, a aplicação consiste em rodar localmente o arquivo <i>firebase_tasks.py</i>, contudo, antes deve alterar o endpoint do arquivo para o IP da máquina loadbalancer. O usuário pode então realizar o comando <i>"python3 firebase_tasks 'tarefas listar'"</i> para conseguir se conectar a uma das instancias disponíveis (aleatoriamente) e receber as informações do servidor Firebase conectado à cada uma delas (stateless).
+Por fim, a aplicação consiste em rodar localmente o arquivo <i>firebase_tasks.py</i>, contudo, antes deve alterar o endpoint do arquivo para o IP da máquina loadbalancer. O usuário pode então realizar o comando <i>"python3 firebase_tasks 'tarefa listar'"</i> para conseguir se conectar a uma das instancias disponíveis (aleatoriamente) e receber as informações do servidor Firebase conectado à cada uma delas (stateless).
 
 ### Bugs conhecidos
-A aplicação do Firebase deveria permitir que o usuário conseguisse realizar um "tarefas adicionar 'arg1' 'arg2'", porém isso não está funcionando como o devido (migué do "get only" but using a Firebase database instead).
+A aplicação do Firebase deveria permitir que o usuário conseguisse realizar um "tarefa adicionar 'arg1' 'arg2'", porém isso não está funcionando como o devido (migué do "get only" but using a Firebase database instead).
 
 
 
