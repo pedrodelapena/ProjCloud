@@ -116,9 +116,10 @@ def create_instances():
                 sudo pip3 install boto3
                 sudo pip3 install pyrebase
                 sudo pip install pyrebase
+                sudo pip3 install flask_restful
                 git clone https://github.com/pedrodelapena/projcloud
                 cd / 
-                cd projcloud/
+                cd projcloud
                 python3 firebase_api.py
             """)
 
