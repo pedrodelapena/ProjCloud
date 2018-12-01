@@ -3,7 +3,8 @@
 ### Por Pedro de la Peña
 
 ### Requisitos
-1.Utilizar uma máquina UNIX para realização do SSH (dá para fazer com putty em Windows mas não garanto que funciona)</br>
+1.Utilizar uma máquina UNIX para realização do SSH (dá para fazer com putty em Windows mas não garanto que funciona)
+
 2.Configurar a AWS Key e Secret Key utilizando o comando <i>aws configure</i>. Caso não tenha o aplicativo, instale-o com <i>sudo snap install aws-cli --classic</i>
 
 ### Como utilizar
