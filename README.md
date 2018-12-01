@@ -23,6 +23,8 @@ A aplicação do Firebase deveria permitir que o usuário conseguisse realizar u
 
 Uma das threads não funciona, portanto enquanto uma instancia é deletada/iniciada, o código "trava".
 
+O loadbalancer precisa ficar aberto no terminal para funcionar.
+
 
 
 
