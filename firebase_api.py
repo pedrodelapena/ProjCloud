@@ -39,7 +39,7 @@ class Tarefa(Resource):
             'description': args['description']
         }
         db.child("Tarefa").set(task)
-        return db.child("Tarefa").post().val()
+        return db.child("Tarefa").get().val()
 
 @app.route('/healthcheck/', methods = ['GET']) 
 def healthcheck():
