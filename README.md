@@ -23,7 +23,7 @@ A aplicação do Firebase deveria permitir que o usuário conseguisse realizar u
 
 O loadbalancer precisa ficar aberto no terminal para funcionar.
 
-![Firebase - Totalmente não stateful](img/firebase.png)
+![Firebase - Totalmente não stateful](firebase.png)
 
 
 
