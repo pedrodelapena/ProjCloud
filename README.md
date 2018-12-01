@@ -19,7 +19,7 @@ Na máquina, o usuário deve configurar novamente as suas credenciais da Amazon,
 Por fim, a aplicação consiste em rodar localmente o arquivo firebase_tasks.py, contudo, antes deve alterar o endpoint do arquivo para o IP da máquina loadbalancer. O usuário pode então realizar o comando "python3 firebase_tasks 'tarefas listar'" para conseguir se conectar a uma das instancias disponíveis (aleatoriamente) e receber as informações do servidor Firebase conectado à cada uma delas (stateless)
 
 ### Bugs conhecidos
-A aplicação do Firebase deveria permitir que o usuário conseguisse realizar um "tarefas adicionar 'arg1' 'arg2'", porém isso não está funcionando como o devido (acredite em mim, o listar é stateless).
+A aplicação do Firebase deveria permitir que o usuário conseguisse realizar um "tarefas adicionar 'arg1' 'arg2'", porém isso não está funcionando como o devido (migué do "get only" but using a Firebase database instead).
 
 
 
